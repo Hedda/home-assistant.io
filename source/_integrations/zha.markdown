@@ -307,7 +307,7 @@ This service disables a lock code on a Zigbee lock.
 | --------- | ---- | ----------- |
 | `code_slot` | no | Which lock code slot to disable
 
-## Adding devices
+## Adding devices (device pairing)
 
 To add a new device:
 
@@ -315,6 +315,11 @@ To add a new device:
 1. Click on the plus button at the bottom right corner to start a scan for new devices.
 1. Reset your Zigbee devices according to the device instructions provided by the manufacturer (e.g., turn on/off lights up to 10 times, switches usually have a reset button/pin). It might take a few seconds for the devices to appear. You can click on **Show logs** for more verbose output.
 1. Once the device is found, it will appear on that page and will be automatically added to your devices. You can optionally change its name and add it to an area (you can change this later). You can search again to add another device, or you can go back to the list of added devices.
+
+#### Best practices to avoiding pairing difficulties
+
+- Zigbee devices can usually only be paired after they have been restored to their factory reset settings. If a device is not brand new then you always have to first manually reset each device to its factory default settings before you will be able add/pair to a other Zigbee coordinator (hub/bridge/gatewaycontroller) that it has never been paired to before. Sometimes even beand new devices might have problems pairing to ZHA without first being reset to their factory default settings.
+- Pairing may require multiple attempts and you may sometimes need to try again and again, (some devices such as Xiaomi and Aqara which are known to not fully follow standard Zigbee specifications may require many attemts over 10-minutes or more, so be patient.
 
 ### Using router devices
 
